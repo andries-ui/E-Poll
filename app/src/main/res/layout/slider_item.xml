@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        tools:ignore="ContentDescription,MissingConstraints"
+        android:layout_width="match_parent"
+        android:layout_height="245dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/my_featured_image"
+
+        android:src="@drawable/ramaphosa" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/my_featured_image"
+        tools:ignore="ContentDescription"
+        android:id="@+id/slider_background"/>
+
+    <TextView
+
+        android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+        android:drawableLeft="@drawable/ic_baseline_chevron_left_24"
+        android:id="@+id/my_caption_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ramaphosa (ANC)"
+        android:gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:textSize="26sp"
+        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteY="164dp"
+        app:layout_constraintBottom_toBottomOf="@+id/slider_background"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/curved_header_style"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_chevron_left_24"
+        android:scaleType="fitXY"
+        android:id="@+id/back"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="80dp"
+        android:paddingBottom="100dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            style="@style/loginStyle">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:background="@color/grey_100"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/voting_box"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20px"
+                        android:textColor="@color/black"
+                        style="@style/TextAppearance.MaterialComponents.Headline5"
+                        android:text="Vote to make a change."/>
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Names"
+                       android:enabled="false"
+                        android:layout_marginTop="30px"
+                        android:id="@+id/leader_names"
+                        android:background="@drawable/input_style"
+                        android:inputType="textPersonName"
+                        android:digits="qwertyuioplkjhgfdsazxcvbnm QWERTYUIOPLKJHGFDSAZXCVBNM"
+                        />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="ID"
+                        android:layout_marginTop="20px"
+                        android:id="@+id/ID"
+                        android:enabled="false"
+                        android:maxLength="13"
+                        android:background="@drawable/input_style"
+                        android:inputType="number"
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20px"
+                        android:textColor="@color/black"
+                        style="@style/TextAppearance.MaterialComponents.Body2"
+                        android:text="select a Party."/>
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/input_style"
+                        android:id="@+id/my_party"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="30px"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Vote"
+                            android:id="@+id/register"/>
+
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/progressbar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

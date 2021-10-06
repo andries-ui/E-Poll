@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:gravity="center_vertical">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/logo"
+        android:src="@color/grey_900"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:id="@+id/party_name"
+        android:layout_toLeftOf="@+id/actions"
+        android:layout_toRightOf="@+id/logo"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:id="@+id/city"
+        android:layout_toLeftOf="@+id/actions"
+        android:layout_alignBottom="@+id/logo"
+        android:layout_toRightOf="@+id/logo"
+        android:layout_marginLeft="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/actions">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/voting"
+            android:text="v"
+            android:gravity="center_horizontal"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_baseline_playlist_add_check_24"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/political_status"
+        android:text="No Status yet"
+        android:layout_below="@+id/logo"
+        android:visibility="gone"
+        style="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="12dp"
+        android:textColor="@color/grey_500"
+        />
+
+</RelativeLayout>

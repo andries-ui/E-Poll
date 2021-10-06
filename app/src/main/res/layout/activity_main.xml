@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="50dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@drawable/voting_box"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vote for change"
+            android:layout_marginTop="20dp"
+            android:textSize="25dp"
+            style="@style/TextAppearance.MaterialComponents.Headline4"
+           android:textColor="@color/blue_500"
+            android:layout_gravity="center_horizontal"
+             />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/progressbar"
+        android:layout_above="@+id/loading"
+        android:layout_centerHorizontal="true"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/loading"
+        android:text="Loading..."
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/black"
+        />
+
+</RelativeLayout>
